@@ -3,11 +3,14 @@ package br.com.dac.dacflix.mb;
 import br.com.dac.dacflix.beans.ComentariosBean;
 import br.com.dac.dacflix.entity.Filme;
 import br.com.dac.dacflix.entity.User;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean
+@SessionScoped //Este escope será melhor explicado quendo formos estudar JSF
 public class ComentariosMB {
 
    private User user = new User();
@@ -40,7 +43,8 @@ public class ComentariosMB {
     }
    
     public List<Filme> getTodosComentarios() {
-        return bean.todosComentarios();
+        //atualizando a nova lista
+        return new ArrayList<>(bean.todosComentarios());
     }
 
 }
