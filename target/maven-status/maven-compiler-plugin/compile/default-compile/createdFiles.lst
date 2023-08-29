@@ -1,0 +1,4 @@
+br\com\dac\dacflix\entity\Filme.class
+br\com\dac\dacflix\entity\User.class
+br\com\dac\dacflix\mb\ComentariosMB.class
+br\com\dac\dacflix\beans\ComentariosBean.class
